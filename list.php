@@ -107,6 +107,48 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 								<header class="agileits-box-header clearfix">
 									<h3>University Data</h3>
 										<div>
+											<?php
+												$totalquery = "SELECT MAX(studentid) as total from student";
+												$totalresult = mysqli_query($dbc, $totalquery);
+												$totalrow = mysqli_fetch_array($totalresult, MYSQL_ASSOC);
+
+												$admuquery = "SELECT COUNT(studentid) as admu from student where university = 'Ateneo De Manila University'";
+												$admuresult = mysqli_query($dbc, $admuquery);
+												$admurow = mysqli_fetch_array($admuresult, MYSQL_ASSOC);
+
+												$dlsuquery = "SELECT COUNT(studentid) as dlsu from student where university = 'De La Salle University'";
+												$dlsuresult = mysqli_query($dbc, $dlsuquery);
+												$dlsurow = mysqli_fetch_array($dlsuresult, MYSQL_ASSOC);
+
+												$lpuquery = "SELECT COUNT(studentid) as lpu from student where university = 'Lyceum of the Philippines University'";
+												$lpuresult = mysqli_query($dbc, $lpuquery);
+												$lpurow = mysqli_fetch_array($lpuresult, MYSQL_ASSOC);
+
+												$muquery = "SELECT COUNT(studentid) as mu from student where university = 'Mapua University'";
+												$muresult = mysqli_query($dbc, $muquery);
+												$murow = mysqli_fetch_array($muresult, MYSQL_ASSOC);
+
+												$stiquery = "SELECT COUNT(studentid) as sti from student where university = 'Systems Technology Institute College'";
+												$stiresult = mysqli_query($dbc, $stiquery);
+												$stirow = mysqli_fetch_array($stiresult, MYSQL_ASSOC);
+
+												$upquery = "SELECT COUNT(studentid) as up from student where university = 'University of the Philippines'";
+												$upresult = mysqli_query($dbc, $upquery);
+												$uprow = mysqli_fetch_array($upresult, MYSQL_ASSOC);
+
+												$ustquery = "SELECT COUNT(studentid) as ust from student where university = 'University of Santo Tomas'";
+												$ustresult = mysqli_query($dbc, $ustquery);
+												$ustrow = mysqli_fetch_array($ustresult, MYSQL_ASSOC);
+
+												echo "<p> &emsp; &emsp; &emsp; &emsp; <b>Total Number of Students; </b>
+												&emsp; <b> In ADMU: </b>".$admurow['admu']."&emsp; <b> In DLSU: </b>".$dlsurow['dlsu']."&emsp; <b> In LPU: </b>".$lpurow['lpu']."&emsp;<b> In MU: </b>
+												".$murow['mu']."&emsp; <b> In STI: </b>".$stirow['sti']."&emsp; <b> In UP: </b>".$uprow['up']."&emsp; <b> In UST: </b>".$ustrow['ust']."</p> <br>";
+											?>
+											<pre>
+
+											</pre>
+										</div>
+										<div>
 										<table id="example" class="table table-striped table-bordered" cellspacing="0" width="100%">
 									        <thead>
 									            <tr>
@@ -196,7 +238,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 	  
 	 
     	$('#example').DataTable({
-    		"lengthMenu": [[5, 10, 25, 50, 100, 200], [5, 10, 25, 50, 100, 200]],
+    		"lengthMenu": [[10, 25, 50, 100, 200], [10, 25, 50, 100, 200]],
 
     		"searching": false,
 
