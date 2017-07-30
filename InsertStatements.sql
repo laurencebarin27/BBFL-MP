@@ -216,7 +216,7 @@ INSERT INTO student (`firstname`,`lastname`,`birthday`,`university`) VALUES ('Se
 
 INSERT INTO student (`firstname`,`lastname`,`birthday`,`university`) VALUES ('Daniel','Ranario','1991-08-25','De La Salle University');
 
-INSERT INTO student (`firstname`,`lastname`,`birthday`,`university`) VALUES ('ChriSystems Technology Institute Collegean Glenn','Reyes','1991-05-11','De La Salle University');
+INSERT INTO student (`firstname`,`lastname`,`birthday`,`university`) VALUES ('Christian Glenn','Reyes','1991-05-11','De La Salle University');
 
 INSERT INTO student (`firstname`,`lastname`,`birthday`,`university`) VALUES ('Julienne Michaela','Ricafort','1991-10-07','De La Salle University');
 
@@ -224,11 +224,11 @@ INSERT INTO student (`firstname`,`lastname`,`birthday`,`university`) VALUES ('Ti
 
 INSERT INTO student (`firstname`,`lastname`,`birthday`,`university`) VALUES ('Elijah','San Pedro','1993-01-20','De La Salle University');
 
-INSERT INTO student (`firstname`,`lastname`,`birthday`,`university`) VALUES ('ChriSystems Technology Institute Collegen','Santos','1990-01-12','De La Salle University');
+INSERT INTO student (`firstname`,`lastname`,`birthday`,`university`) VALUES ('Christin','Santos','1990-01-12','De La Salle University');
 
 INSERT INTO student (`firstname`,`lastname`,`birthday`,`university`) VALUES ('Rafael Santiago','Sayson','1990-02-03','De La Salle University');
 
-INSERT INTO student (`firstname`,`lastname`,`birthday`,`university`) VALUES ('ChriSystems Technology Institute Collegean Erin Faith','Silan','1990-03-31','De La Salle University');
+INSERT INTO student (`firstname`,`lastname`,`birthday`,`university`) VALUES ('Christian Erin Faith','Silan','1990-03-31','De La Salle University');
 
 INSERT INTO student (`firstname`,`lastname`,`birthday`,`university`) VALUES ('Maria Geraldine','Songco','1990-04-17','De La Salle University');
 
@@ -304,7 +304,7 @@ INSERT INTO student (`firstname`,`lastname`,`birthday`,`university`) VALUES ('Br
 
 INSERT INTO student (`firstname`,`lastname`,`birthday`,`university`) VALUES ('Chana','Collier','1993-03-28','Ateneo De Manila University');
 
-INSERT INTO student (`firstname`,`lastname`,`birthday`,`university`) VALUES ('Mapua Universitychell','Underwood','1994-06-14','Ateneo De Manila University');
+INSERT INTO student (`firstname`,`lastname`,`birthday`,`university`) VALUES ('Mitchell','Underwood','1994-06-14','Ateneo De Manila University');
 
 INSERT INTO student (`firstname`,`lastname`,`birthday`,`university`) VALUES ('Annabelle','Sweet','1995-09-18','Ateneo De Manila University');
 
@@ -384,9 +384,9 @@ INSERT INTO student (`firstname`,`lastname`,`birthday`,`university`) VALUES ('Ti
 
 INSERT INTO student (`firstname`,`lastname`,`birthday`,`university`) VALUES ('Giancarlo','Sutton','1997-08-13','Ateneo De Manila University');
 
-INSERT INTO student (`firstname`,`lastname`,`birthday`,`university`) VALUES ('SebaSystems Technology Institute Collegean','Sandoval','1996-02-25','Ateneo De Manila University');
+INSERT INTO student (`firstname`,`lastname`,`birthday`,`university`) VALUES ('Sebastian','Sandoval','1996-02-25','Ateneo De Manila University');
 
-INSERT INTO student (`firstname`,`lastname`,`birthday`,`university`) VALUES ('MUniversity of Santo Tomasafa','Adams','1994-01-03','Ateneo De Manila University');
+INSERT INTO student (`firstname`,`lastname`,`birthday`,`university`) VALUES ('Mustafa','Adams','1994-01-03','Ateneo De Manila University');
 
 INSERT INTO student (`firstname`,`lastname`,`birthday`,`university`) VALUES ('Logan','Simon','1997-07-30','Ateneo De Manila University');
 
@@ -500,7 +500,7 @@ INSERT INTO student (`firstname`,`lastname`,`birthday`,`university`) VALUES ('Na
 
 INSERT INTO student (`firstname`,`lastname`,`birthday`,`university`) VALUES ('Vivienne','Jennings','1994-07-12','Ateneo De Manila University');
 
-INSERT INTO student (`firstname`,`lastname`,`birthday`,`university`) VALUES ('Kayden','SMapua Universityh','1998-12-15','Ateneo De Manila University');
+INSERT INTO student (`firstname`,`lastname`,`birthday`,`university`) VALUES ('Kayden','Smith','1998-12-15','Ateneo De Manila University');
 
 INSERT INTO student (`firstname`,`lastname`,`birthday`,`university`) VALUES ('Lylah','Wilder','1995-03-19','Ateneo De Manila University');
 
@@ -572,7 +572,7 @@ INSERT INTO student (`firstname`,`lastname`,`birthday`,`university`) VALUES ('Ma
 
 INSERT INTO student (`firstname`,`lastname`,`birthday`,`university`) VALUES ('Kasen','Hyde','1992-04-04','Ateneo De Manila University');
 
-INSERT INTO student (`firstname`,`lastname`,`birthday`,`university`) VALUES ('TriSystems Technology Institute Collegean','Ballard','1998-12-21','Ateneo De Manila University');
+INSERT INTO student (`firstname`,`lastname`,`birthday`,`university`) VALUES ('Tristian','Ballard','1998-12-21','Ateneo De Manila University');
 
 INSERT INTO student (`firstname`,`lastname`,`birthday`,`university`) VALUES ('Casey','Daugherty','1998-01-03','Ateneo De Manila University');
 
@@ -644,7 +644,7 @@ INSERT INTO student (`firstname`,`lastname`,`birthday`,`university`) VALUES ('Jo
 
 INSERT INTO student (`firstname`,`lastname`,`birthday`,`university`) VALUES ('Matilda','Baird','1993-11-08','Ateneo De Manila University');
 
-INSERT INTO student (`firstname`,`lastname`,`birthday`,`university`) VALUES ('CriSystems Technology Institute Collegean','Mcmahon','1993-04-08','Ateneo De Manila University');
+INSERT INTO student (`firstname`,`lastname`,`birthday`,`university`) VALUES ('Cristian','Mcmahon','1993-04-08','Ateneo De Manila University');
 
 INSERT INTO student (`firstname`,`lastname`,`birthday`,`university`) VALUES ('Deborah','Williamson','1998-02-08','Ateneo De Manila University');
 
@@ -906,7 +906,7 @@ INSERT INTO student (`firstname`,`lastname`,`birthday`,`university`) VALUES ('Ja
 
 INSERT INTO student (`firstname`,`lastname`,`birthday`,`university`) VALUES ('Jerimiah','Donaldson','1994-05-29','Ateneo De Manila University');
 
-INSERT INTO student (`firstname`,`lastname`,`birthday`,`university`) VALUES ('JUniversity of Santo Tomasus','Cote','1995-11-21','Ateneo De Manila University');
+INSERT INTO student (`firstname`,`lastname`,`birthday`,`university`) VALUES ('Justus','Cote','1995-11-21','Ateneo De Manila University');
 
 INSERT INTO student (`firstname`,`lastname`,`birthday`,`university`) VALUES ('Quinton','Carlson','1992-11-21','Ateneo De Manila University');
 
@@ -940,7 +940,7 @@ INSERT INTO student (`firstname`,`lastname`,`birthday`,`university`) VALUES ('Re
 
 INSERT INTO student (`firstname`,`lastname`,`birthday`,`university`) VALUES ('Jovanni','Hendricks','1997-01-17','Ateneo De Manila University');
 
-INSERT INTO student (`firstname`,`lastname`,`birthday`,`university`) VALUES ('SebaSystems Technology Institute Collegean','Kramer','1994-09-19','Ateneo De Manila University');
+INSERT INTO student (`firstname`,`lastname`,`birthday`,`university`) VALUES ('Sebastian','Kramer','1994-09-19','Ateneo De Manila University');
 
 INSERT INTO student (`firstname`,`lastname`,`birthday`,`university`) VALUES ('Miguel','Henson','1998-04-02','Ateneo De Manila University');
 
@@ -1066,7 +1066,7 @@ INSERT INTO student (`firstname`,`lastname`,`birthday`,`university`) VALUES ('Ju
 
 INSERT INTO student (`firstname`,`lastname`,`birthday`,`university`) VALUES ('Weston','Strong','1996-07-28','Ateneo De Manila University');
 
-INSERT INTO student (`firstname`,`lastname`,`birthday`,`university`) VALUES ('TriSystems Technology Institute Collegen','Livingston','1998-08-22','Ateneo De Manila University');
+INSERT INTO student (`firstname`,`lastname`,`birthday`,`university`) VALUES ('Tristin','Livingston','1998-08-22','Ateneo De Manila University');
 
 INSERT INTO student (`firstname`,`lastname`,`birthday`,`university`) VALUES ('Milagros','Nixon','1995-08-06','Ateneo De Manila University');
 
@@ -1442,7 +1442,7 @@ INSERT INTO student (`firstname`,`lastname`,`birthday`,`university`) VALUES ('Ja
 
 INSERT INTO student (`firstname`,`lastname`,`birthday`,`university`) VALUES ('Nahla','Perry','1994-01-26','Ateneo De Manila University');
 
-INSERT INTO student (`firstname`,`lastname`,`birthday`,`university`) VALUES ('WeSystems Technology Institute Collegen','Burton','1992-03-07','Ateneo De Manila University');
+INSERT INTO student (`firstname`,`lastname`,`birthday`,`university`) VALUES ('Westin','Burton','1992-03-07','Ateneo De Manila University');
 
 INSERT INTO student (`firstname`,`lastname`,`birthday`,`university`) VALUES ('Lexi','Carr','1992-02-19','Ateneo De Manila University');
 
@@ -1516,7 +1516,7 @@ INSERT INTO student (`firstname`,`lastname`,`birthday`,`university`) VALUES ('Ke
 
 INSERT INTO student (`firstname`,`lastname`,`birthday`,`university`) VALUES ('Amari','Alford','1997-04-19','Ateneo De Manila University');
 
-INSERT INTO student (`firstname`,`lastname`,`birthday`,`university`) VALUES ('DUniversity of Santo Tomasin','Contreras','1994-05-31','Ateneo De Manila University');
+INSERT INTO student (`firstname`,`lastname`,`birthday`,`university`) VALUES ('Dustin','Contreras','1994-05-31','Ateneo De Manila University');
 
 INSERT INTO student (`firstname`,`lastname`,`birthday`,`university`) VALUES ('Angeline','Gillespie','1993-11-18','Ateneo De Manila University');
 
@@ -1580,7 +1580,7 @@ INSERT INTO student (`firstname`,`lastname`,`birthday`,`university`) VALUES ('Br
 
 INSERT INTO student (`firstname`,`lastname`,`birthday`,`university`) VALUES ('Keenan','Norris','1992-01-15','Ateneo De Manila University');
 
-INSERT INTO student (`firstname`,`lastname`,`birthday`,`university`) VALUES ('GUniversity of Santo Tomasavo','Hanson','1992-10-08','Ateneo De Manila University');
+INSERT INTO student (`firstname`,`lastname`,`birthday`,`university`) VALUES ('Gustavo','Hanson','1992-10-08','Ateneo De Manila University');
 
 INSERT INTO student (`firstname`,`lastname`,`birthday`,`university`) VALUES ('Clarissa','Soto','1994-01-27','Ateneo De Manila University');
 
@@ -1644,7 +1644,7 @@ INSERT INTO student (`firstname`,`lastname`,`birthday`,`university`) VALUES ('Je
 
 INSERT INTO student (`firstname`,`lastname`,`birthday`,`university`) VALUES ('Rogelio','Barnett','1992-09-21','Ateneo De Manila University');
 
-INSERT INTO student (`firstname`,`lastname`,`birthday`,`university`) VALUES ('AugUniversity of Santo Tomas','Conley','1998-08-22','Ateneo De Manila University');
+INSERT INTO student (`firstname`,`lastname`,`birthday`,`university`) VALUES ('August','Conley','1998-08-22','Ateneo De Manila University');
 
 INSERT INTO student (`firstname`,`lastname`,`birthday`,`university`) VALUES ('Maliah','AUniversity of Santo Tomasin','1995-07-01','Ateneo De Manila University');
 
@@ -1688,7 +1688,7 @@ INSERT INTO student (`firstname`,`lastname`,`birthday`,`university`) VALUES ('Da
 
 INSERT INTO student (`firstname`,`lastname`,`birthday`,`university`) VALUES ('Desiree','Miranda','1992-11-16','Ateneo De Manila University');
 
-INSERT INTO student (`firstname`,`lastname`,`birthday`,`university`) VALUES ('AgUniversity of Santo Tomasin','Barber','1992-06-05','Ateneo De Manila University');
+INSERT INTO student (`firstname`,`lastname`,`birthday`,`university`) VALUES ('Agustin','Barber','1992-06-05','Ateneo De Manila University');
 
 INSERT INTO student (`firstname`,`lastname`,`birthday`,`university`) VALUES ('Maxim','Holt','1996-03-27','Ateneo De Manila University');
 
@@ -1744,7 +1744,7 @@ INSERT INTO student (`firstname`,`lastname`,`birthday`,`university`) VALUES ('Ma
 
 INSERT INTO student (`firstname`,`lastname`,`birthday`,`university`) VALUES ('Corey','Nixon','1996-05-06','Ateneo De Manila University');
 
-INSERT INTO student (`firstname`,`lastname`,`birthday`,`university`) VALUES ('KriSystems Technology Institute Collegena','Sosa','1995-07-20','Ateneo De Manila University');
+INSERT INTO student (`firstname`,`lastname`,`birthday`,`university`) VALUES ('Kristina','Sosa','1995-07-20','Ateneo De Manila University');
 
 INSERT INTO student (`firstname`,`lastname`,`birthday`,`university`) VALUES ('Kairi','Edwards','1994-10-05','Ateneo De Manila University');
 
@@ -1780,7 +1780,7 @@ INSERT INTO student (`firstname`,`lastname`,`birthday`,`university`) VALUES ('Ta
 
 INSERT INTO student (`firstname`,`lastname`,`birthday`,`university`) VALUES ('Maverick','Mercado','1997-08-25','Ateneo De Manila University');
 
-INSERT INTO student (`firstname`,`lastname`,`birthday`,`university`) VALUES ('Kayden','HoUniversity of Santo Tomason','1993-03-24','Ateneo De Manila University');
+INSERT INTO student (`firstname`,`lastname`,`birthday`,`university`) VALUES ('Kayden','Houston','1993-03-24','Ateneo De Manila University');
 
 INSERT INTO student (`firstname`,`lastname`,`birthday`,`university`) VALUES ('Daniella','Washington','1996-10-29','Ateneo De Manila University');
 
@@ -1930,7 +1930,7 @@ INSERT INTO student (`firstname`,`lastname`,`birthday`,`university`) VALUES ('De
 
 INSERT INTO student (`firstname`,`lastname`,`birthday`,`university`) VALUES ('Luca','Hopkins','1992-04-13','Ateneo De Manila University');
 
-INSERT INTO student (`firstname`,`lastname`,`birthday`,`university`) VALUES ('GUniversity of Santo Tomasavo','Hooper','1992-04-06','Ateneo De Manila University');
+INSERT INTO student (`firstname`,`lastname`,`birthday`,`university`) VALUES ('Gustavo','Hooper','1992-04-06','Ateneo De Manila University');
 
 INSERT INTO student (`firstname`,`lastname`,`birthday`,`university`) VALUES ('Dawson','Patterson','1997-10-03','Ateneo De Manila University');
 
@@ -2154,7 +2154,7 @@ INSERT INTO student (`firstname`,`lastname`,`birthday`,`university`) VALUES ('Ma
 
 INSERT INTO student (`firstname`,`lastname`,`birthday`,`university`) VALUES ('Taliyah','Rowland','1995-09-08','Ateneo De Manila University');
 
-INSERT INTO student (`firstname`,`lastname`,`birthday`,`university`) VALUES ('Danielle','JUniversity of Santo Tomasice','1993-05-30','Ateneo De Manila University');
+INSERT INTO student (`firstname`,`lastname`,`birthday`,`university`) VALUES ('Danielle','Justice','1993-05-30','Ateneo De Manila University');
 
 INSERT INTO student (`firstname`,`lastname`,`birthday`,`university`) VALUES ('Ethan','Good','1994-08-16','Ateneo De Manila University');
 
@@ -2180,7 +2180,7 @@ INSERT INTO student (`firstname`,`lastname`,`birthday`,`university`) VALUES ('Th
 
 INSERT INTO student (`firstname`,`lastname`,`birthday`,`university`) VALUES ('Maia','Vaughan','1993-01-11','Ateneo De Manila University');
 
-INSERT INTO student (`firstname`,`lastname`,`birthday`,`university`) VALUES ('Melina','JUniversity of Santo Tomasice','1995-03-01','Ateneo De Manila University');
+INSERT INTO student (`firstname`,`lastname`,`birthday`,`university`) VALUES ('Melina','Justice','1995-03-01','Ateneo De Manila University');
 
 INSERT INTO student (`firstname`,`lastname`,`birthday`,`university`) VALUES ('Eden','Herrera','1996-12-30','Ateneo De Manila University');
 
@@ -2236,7 +2236,7 @@ INSERT INTO student (`firstname`,`lastname`,`birthday`,`university`) VALUES ('Em
 
 INSERT INTO student (`firstname`,`lastname`,`birthday`,`university`) VALUES ('Nathaly','Head','1992-11-28','Ateneo De Manila University');
 
-INSERT INTO student (`firstname`,`lastname`,`birthday`,`university`) VALUES ('JUniversity of Santo Tomasus','Best','1997-10-29','Ateneo De Manila University');
+INSERT INTO student (`firstname`,`lastname`,`birthday`,`university`) VALUES ('Justus','Best','1997-10-29','Ateneo De Manila University');
 
 INSERT INTO student (`firstname`,`lastname`,`birthday`,`university`) VALUES ('Quentin','Camacho','1997-09-05','Ateneo De Manila University');
 
