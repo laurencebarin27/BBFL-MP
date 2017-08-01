@@ -2,6 +2,11 @@
 session_start();
 require_once('mysql_connect.php');
 
+$_SESSION['username'] = $_SESSION['user'];
+$fullnamequery = "SELECT fullname from users where username = '{$_SESSION['username']}'";
+$fullnameresult = mysqli_query($dbc,$fullnamequery);
+$fullnamerow = mysqli_fetch_array($fullnameresult, MYSQL_ASSOC);
+
 // Request 1: Group by Age or University (View by option checkbox on Universities and Age then Button)
 // Request 2: Sort by Last Name (Data Table)
 // Request 3: Total number of students in each University (Show computed data)
@@ -63,7 +68,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
         <li class="dropdown">
             <a data-toggle="dropdown" class="dropdown-toggle" href="#">
                 <img alt="" src="images/2.png">
-                <span class="username">John Doe</span>
+                <span class="username"><?php echo $fullnamerow['fullname']?></span>
                 <b class="caret"></b>
             </a>
             <ul class="dropdown-menu extended logout">
@@ -106,6 +111,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 							<div>
 								<header class="agileits-box-header clearfix">
 									<h3>University Data</h3>
+										<center>
 										<div>
 											<?php
 												$totalquery = "SELECT MAX(studentid) as total from student";
@@ -140,58 +146,181 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 												$ustresult = mysqli_query($dbc, $ustquery);
 												$ustrow = mysqli_fetch_array($ustresult, MYSQL_ASSOC);
 
-												echo "<p> &emsp; &emsp; &emsp; &emsp; <b>Total Number of Students; </b>
+												echo "<p> &emsp; <b>Total Number of Students; </b>
 												&emsp; <b> In ADMU: </b>".$admurow['admu']."&emsp; <b> In DLSU: </b>".$dlsurow['dlsu']."&emsp; <b> In LPU: </b>".$lpurow['lpu']."&emsp;<b> In MU: </b>
 												".$murow['mu']."&emsp; <b> In STI: </b>".$stirow['sti']."&emsp; <b> In UP: </b>".$uprow['up']."&emsp; <b> In UST: </b>".$ustrow['ust']."</p> <br>";
 											?>
-											<pre>
+											<?php
+												$agequery = "SELECT TIMESTAMPDIFF(YEAR, birthday, CURDATE()) as age from student group by 1 asc";
+												$ageresult = mysqli_query($dbc,$agequery);
+												$num_rows = $ageresult->num_rows;
 
-											</pre>
+												echo '
+												<div style="width:980px;height:220px;border:1px solid #ffffcc;background:#ffffcc;">
+													<br>
+													&nbsp; <b> Filter List by: </b> 
+													<br><br>
+													<form action="'.$_SERVER['PHP_SELF'].'" method="post">
+
+	  												&emsp;&emsp; 				   <input type="checkbox" name="univ[]" value="Ateneo De Manila University"> ADMU 		
+	  												&emsp;&emsp;&emsp;&emsp;&emsp; <input type="checkbox" name="univ[]" value="De La Salle University"> DLSU 		
+	  												&emsp;&emsp;&emsp;&emsp;&emsp; <input type="checkbox" name="univ[]" value="Lyceum of the Philippines University"> LPU 		
+	  												&emsp;&emsp;&emsp;&emsp;&emsp; <input type="checkbox" name="univ[]" value="Mapua University"> MU 		
+	  												&emsp;&emsp;&emsp;&emsp;&emsp; <input type="checkbox" name="univ[]" value="Systems Technology Institute College"> STI 		
+	  												&emsp;&emsp;&emsp;&emsp;&emsp; <input type="checkbox" name="univ[]" value="University of the Philippines"> UP 		
+	  												&emsp;&emsp;&emsp;&emsp;&emsp; <input type="checkbox" name="univ[]" value="University of Santo Tomas"> UST
+	 												<br><br><br>
+	 												Age Range: 
+	 												&emsp;&emsp;<select name="min" required> 
+	 															<option value="">Min</option>';
+	 															if (!empty($num_rows)){
+	 																while ($agerow = mysqli_fetch_array($ageresult, MYSQL_ASSOC)){
+	 																	echo '<option value="'.$agerow['age'].'">'.$agerow['age'].'</option>';
+	 																}
+	 															}
+	 												echo 	   '</select> &emsp; -
+	 													&emsp; <select name="max" required> 
+	 															<option value="">Max</option>';
+	 															$agequery2 = "SELECT TIMESTAMPDIFF(YEAR, birthday, CURDATE()) as age from student group by 1 asc";
+																$ageresult2 = mysqli_query($dbc,$agequery2);
+																$num_rows = $ageresult2->num_rows;
+
+	 															if (!empty($num_rows)){
+	 																while ($agerow2 = mysqli_fetch_array($ageresult2, MYSQL_ASSOC)){
+	 																	echo '<option value="'.$agerow2['age'].'">'.$agerow2['age'].'</option>';
+	 																}
+	 															}
+	 												echo  	   '</select>
+	 												<br><br>
+	 												<input type="submit" name="filter" value="Filter"> 
+	 												</form> 
+	 											</div> ';
+													
+											?>
+											
+ 											<br><br>
 										</div>
+										</center>
 										<div>
-										<table id="example" class="table table-striped table-bordered" cellspacing="0" width="100%">
-									        <thead>
-									            <tr>
-									                <th>First Name</th>
-									                <th>Last Name</th>
-									                <th>Age</th>
-									                <th>Birthday</th>
-									                <th>University</th>
-									            </tr>
-									        </thead>
-									        <tfoot>
-									            <tr>
-									                <th>First Name</th>
-									                <th>Last Name</th>
-									                <th>Age</th>
-									                <th>Birthday</th>
-									                <th>University</th>
-									            </tr>
-									        </tfoot>
-									        
-									        <tbody>
-									        	<?php
-										        	//Get University Data
-										        	$universityquery = "SELECT firstname, lastname, birthday, university, (YEAR(CURDATE()) - YEAR(birthday)) as age
-										        	from student";
-										        	$universityresult = mysqli_query($dbc, $universityquery);
-										        	$num_rows=$universityresult->num_rows;
+										<?php
+											if (isset($_POST['filter'])){
+												echo '<table id="example" class="table table-striped table-bordered" cellspacing="0" width="100%">
+												        <thead>
+												            <tr>
+												                <th>First Name</th>
+												                <th>Last Name</th>
+												                <th>Age</th>
+												                <th>Birthday</th>
+												                <th>University</th>
+												            </tr>
+												        </thead>
+												        <tfoot>
+												            <tr>
+												                <th>First Name</th>
+												                <th>Last Name</th>
+												                <th>Age</th>
+												                <th>Birthday</th>
+												                <th>University</th>
+												            </tr>
+												        </tfoot>
+												        
+												        <tbody>';
 
-										        	if (!empty($num_rows)){
+												if (!empty($_POST['univ'])){
+													$university = array();
+													$i = 0;
+													foreach($_POST['univ'] as $compare){
+														$university[$i] = $compare;
+														$i++;
+													}
 
-									        		while ($universityrow = mysqli_fetch_array($universityresult,MYSQL_ASSOC))
 
-									        			echo "<tr>
-												                <td>".$universityrow['firstname']."</td>
-												                <td>".$universityrow['lastname']."</td>
-												                <td>".$universityrow['age']."</td>
-												                <td>".$universityrow['birthday']."</td>
-												                <td>".$universityrow['university']."</td>
-												            </tr>";
-									        		}
-									        	?>
-									        </tbody>
-									    </table>
+													$j = 0;
+													while ($j < $i){
+														$tablequery = "SELECT firstname, lastname, birthday, university, TIMESTAMPDIFF(YEAR, birthday, CURDATE()) as age
+														from student";
+														$tableresult = mysqli_query($dbc, $tablequery);
+														$num_rows=$tableresult->num_rows;
+														if (!empty($num_rows)){
+															while ($tablerow = mysqli_fetch_array($tableresult, MYSQL_ASSOC)){
+																if ($university[$j] == $tablerow['university']){
+																	if ($tablerow['age'] >= $_POST['min'] && $tablerow['age'] <= $_POST['max']){
+																		echo "<tr>
+															                <td>".$tablerow['firstname']."</td>
+															                <td>".$tablerow['lastname']."</td>
+															                <td>".$tablerow['age']."</td>
+															                <td>".$tablerow['birthday']."</td>
+															                <td>".$tablerow['university']."</td>
+															            </tr>";
+																	}
+																	
+																}
+
+															}
+														}
+														
+														$j++;
+													}
+													
+
+													
+													
+												}
+												
+												
+												echo '</tbody>
+											    </table>';
+
+											} else {
+												echo '
+												<table id="example" class="table table-striped table-bordered" cellspacing="0" width="100%">
+											        <thead>
+											            <tr>
+											                <th>First Name</th>
+											                <th>Last Name</th>
+											                <th>Age</th>
+											                <th>Birthday</th>
+											                <th>University</th>
+											            </tr>
+											        </thead>
+											        <tfoot>
+											            <tr>
+											                <th>First Name</th>
+											                <th>Last Name</th>
+											                <th>Age</th>
+											                <th>Birthday</th>
+											                <th>University</th>
+											            </tr>
+											        </tfoot>
+											        
+											        <tbody>';
+											        	
+												        	//Get University Data
+												        	$universityquery = "SELECT firstname, lastname, birthday, university, TIMESTAMPDIFF(YEAR, birthday, CURDATE()) as age
+												        	from student";
+												        	$universityresult = mysqli_query($dbc, $universityquery);
+												        	$num_rows=$universityresult->num_rows;
+
+												        	if (!empty($num_rows)){
+
+												        		while ($universityrow = mysqli_fetch_array($universityresult,MYSQL_ASSOC)) {
+												        			echo "<tr>
+															                <td>".$universityrow['firstname']."</td>
+															                <td>".$universityrow['lastname']."</td>
+															                <td>".$universityrow['age']."</td>
+															                <td>".$universityrow['birthday']."</td>
+															                <td>".$universityrow['university']."</td>
+															            </tr>";
+												        		}
+
+											        			
+											        		}
+											        
+											   echo '</tbody>
+											    </table>';
+											}
+										?>
+										
 										</div>
 								</header>
 								<div class="agileits-box-body clearfix">
